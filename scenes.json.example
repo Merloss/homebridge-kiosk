@@ -1,0 +1,36 @@
+[
+  {
+    "id": "night",
+    "name": "Good night",
+    "icon": "🌙",
+    "actions": [
+      { "deviceId": "mock-living-lamp", "characteristic": "On", "value": false },
+      { "deviceId": "mock-kitchen-spots", "characteristic": "On", "value": false },
+      { "deviceId": "mock-bedroom-lamp", "characteristic": "On", "value": true },
+      { "deviceId": "mock-bedroom-lamp", "characteristic": "Brightness", "value": 15, "delay": 200 },
+      { "deviceId": "mock-front-door", "characteristic": "LockTargetState", "value": 1 }
+    ]
+  },
+  {
+    "id": "movie",
+    "name": "Movie",
+    "icon": "🎬",
+    "actions": [
+      { "deviceId": "mock-living-lamp", "characteristic": "On", "value": true },
+      { "deviceId": "mock-living-lamp", "characteristic": "Brightness", "value": 20, "delay": 200 },
+      { "deviceId": "mock-living-blinds", "characteristic": "TargetPosition", "value": 0 },
+      { "deviceId": "mock-living-tv", "characteristic": "Active", "value": 1 }
+    ]
+  },
+  {
+    "id": "all-off",
+    "name": "All off",
+    "icon": "⏻",
+    "actions": [
+      { "deviceId": "mock-living-lamp", "characteristic": "On", "value": false },
+      { "deviceId": "mock-kitchen-spots", "characteristic": "On", "value": false },
+      { "deviceId": "mock-bedroom-lamp", "characteristic": "On", "value": false },
+      { "deviceId": "mock-garden-lights", "characteristic": "On", "value": false }
+    ]
+  }
+]

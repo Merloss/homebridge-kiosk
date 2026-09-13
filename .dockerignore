@@ -1,0 +1,16 @@
+node_modules
+web/dist
+demo.html
+docs
+test
+.git
+.github
+.env
+.env.*
+!.env.example
+scenes.json
+*.log
+.vscode
+.idea
+.cursor
+.claude

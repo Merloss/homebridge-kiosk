@@ -1,0 +1,11 @@
+services:
+  kiosk:
+    build: .
+    image: homebridge-kiosk
+    container_name: homebridge-kiosk
+    restart: unless-stopped
+    ports:
+      - '8080:8080'
+    env_file: .env
+    environment:
+      PORT: 8080

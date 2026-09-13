@@ -1,0 +1,57 @@
+{
+  "name": "homebridge-kiosk",
+  "version": "1.0.0",
+  "description": "A touch-first wall panel for Homebridge. Runs on a cheap tablet or a Raspberry Pi screen.",
+  "license": "MIT",
+  "author": "Merloss",
+  "keywords": [
+    "homebridge",
+    "homekit",
+    "kiosk",
+    "dashboard",
+    "wall-panel",
+    "raspberry-pi",
+    "touchscreen",
+    "smart-home"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/merloss/homebridge-kiosk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/merloss/homebridge-kiosk/issues"
+  },
+  "homepage": "https://github.com/merloss/homebridge-kiosk#readme",
+  "type": "module",
+  "main": "server/index.js",
+  "engines": {
+    "node": ">=22.9"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server/index.js",
+    "mock": "node --env-file-if-exists=.env server/index.js --mock",
+    "build": "vite build",
+    "build:demo": "node tools/build-demo.js",
+    "dev:server": "node --env-file-if-exists=.env --watch server/index.js --mock",
+    "dev:ui": "vite",
+    "inspect": "node --env-file-if-exists=.env tools/inspect-raw.js",
+    "test": "npm run build && node test/run.mjs",
+    "screenshots": "npm run build && node tools/screenshots.mjs"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "lucide-react": "^1.45.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "ws": "^8.18.0"
+  },
+  "overrides": {
+    "qs": "^6.16.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.1.1",
+    "playwright": "^1.63.0",
+    "vite": "^8.3.0",
+    "vite-plugin-singlefile": "^2.3.3"
+  }
+}
